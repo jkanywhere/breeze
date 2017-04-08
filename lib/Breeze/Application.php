@@ -959,8 +959,8 @@ class Errors extends ClosuresCollection
             $exception = $this->_getException($exception, $code, $status);
         }
 
-        if (!($function = $this->get($exception->getCode()))
-            && !($function = $this->get(get_class($exception)))
+        if (!($function = $this->get(get_class($exception)))
+            && !($function = $this->get($exception->getCode()))
         ) {
             $function = $this->_defaultError;
         }
